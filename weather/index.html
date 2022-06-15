@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="weather">
+      <form id="search">
+        <input type="search" placeholder="Search" autocomplete="off" auto id="input"/>
+        
+        <input type="submit" value="Enter"
+        class="enter" id="enter"
+        />
+
+        <input type="submit" value="Current" 
+        class="current" id="current"/>
+      </form>
+
+      <h2 class="location" id="city">
+        Lagos
+        </h2>
+        <p class="location" id="date">
+          Saturday 12:08AM
+    </p>
+
+     <h1> 
+      <div class="temp" id="temp">
+        33℃
+      </div>
+      <div class="cloud" id="cloud">
+         Cloudy
+      </div>
+    </h1>
+      
+    <p>
+      <div id="humid">
+     💧 Humidity: 19% 
+      </div>
+     <div id="wind">
+      💨 Wind: 4km/h
+      </div>
+    </p>
+
+      <div class="row">
+        <div class="col-2">
+          Sun
+          🌥 
+          29℃ 
+        Mostly cloudy
+        </div>
+        <div class="col-2">
+          Mon
+          ☀
+          36℃ 
+          Sunny
+        </div>
+        <div class="col-2">
+          Tue
+          🌤
+          32℃ 
+          Partly cloudy
+        </div>
+        <div class="col-2">
+            Wed
+            🌨
+            25℃ 
+            Rainfall
+          </div>
+          <div class="col-2">
+            Thurs
+            ⛈ 
+            22℃ 
+           Heavy Rainfall
+          </div>
+          <div class="col-2">
+            Fri
+            <br>
+            ☀
+            37℃
+            Sunny
+            </div>
+      </div>
+    </div>
+
+    <p class="code">
+    <a href="" target="_blank">Open-source code</a> by Maryanne Wealth
+    </p>
+
+  <script src="javascript.js"></script>
+  
+  </body>
+</html>
