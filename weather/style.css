@@ -46,7 +46,7 @@ h1 {
   font-size: 18px;
   opacity: 0.8;
   position: relative;
-  right: 100px;
+
   bottom: 50px;
 }
 
@@ -56,7 +56,7 @@ h1 {
   font-size: 18px;
   opacity: 0.8;
   position: relative;
-  right: 100px;
+
   bottom: 50px;
 }
 
@@ -99,6 +99,6 @@ h1 {
   margin-top: -50px;
   font-weight: 500;
   position: relative;
-  left: 40px;
-  bottom: 10px;
+  left: 100px;
+  bottom: 30px;
 }
