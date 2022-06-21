@@ -5,12 +5,16 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="weather/style.css" />
 
-    
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
     />
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -19,76 +23,55 @@
   <body>
     <div class="container">
       <div class="weather">
-      <form id="search">
-        <input type="search" placeholder="Search" autocomplete="off" auto id="input"/>
-        
-        <input type="submit" value="Enter"
-        class="enter" id="enter"
-        />
+        <form id="search">
+          <input
+            type="search"
+            placeholder="Search"
+            autocomplete="off"
+            auto
+            id="input"
+          />
 
-        <input type="submit" value="Current" 
-        class="current" id="current"/>
-      </form>
+          <input type="submit" value="Enter" class="enter" id="enter" />
 
-      <h2 class="location" id="city">
-        Lagos
-        </h2>
-        <p class="location" id="date">
-          Saturday 12:08AM
-    </p>
+          <input type="submit" value="Current" class="current" id="current" />
+        </form>
 
-     <h1> 
-      <div class="temp" id="temp">
-        33℃
-      </div>
-      <div class="cloud" id="cloud">
-         Cloudy
-      </div>
-    </h1>
-      
-    <p>
-      <div id="humid">
-     💧 Humidity: 19% 
-      </div>
-     <div id="wind">
-      💨 Wind: 4km/h
-      </div>
-    </p>
+        <h2 class="location" id="city">Lagos</h2>
+        <p class="location" id="date">Saturday 12:08AM</p>
 
-      <div class="row">
-        <div class="col-3">
-          Sun
-          🌥 
-          29℃ 
-        Mostly cloudy
-        </div>
-        <div class="col-3">
-          Mon
-          ☀
-          36℃ 
-          Sunny
-        </div>
-        <div class="col-3">
-          Tue
-          🌤
-          32℃ 
-          Partly cloudy
-        </div>
-        <div class="col-3">
-            Wed
-            🌨
-            25℃ 
-            Rainfall
+        <div class="row">
+          <div class="col-2">
+          <div class="temp" id="temp">33℃</div>
+          <div class="cloud" id="cloud">Cloudy</div>
           </div>
-          
+
+          <div class="col-4">
+          <div class="icon">
+          <img src="" alt="" id="icon"/>
+        </div>
+      </div>
+
+        <span class="condition">
+          <div id="humid">💧 Humidity: %</div>
+          <div id="wind">💨 Wind: km/h</div>
+        </span>
+
+      <div class="row" id="row">
+        <div class="col-3">Sun 🌥 29℃ Mostly cloudy</div>
+        <div class="col-3">Mon ☀ 36℃ Sunny</div>
+        <div class="col-3">Tue 🌤 32℃ Partly cloudy</div>
+        <div class="col-3">Wed 🌨 25℃ Rainfall</div>
       </div>
     </div>
 
     <p class="code">
-    <a href="https://github.com/pristyn/Forecast/tree/main" target="_blank">Open-source code</a> by Maryanne Wealth
+      <a href="https://github.com/pristyn/Forecast/tree/main" target="_blank"
+        >Open-source code</a
+      >
+      by Maryanne Wealth
     </p>
 
-  <script src="weather/javascript.js"></script>
-
+    <script src="weather/javascript.js"></script>
   </body>
 </html>

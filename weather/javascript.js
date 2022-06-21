@@ -72,12 +72,13 @@ function metropolis(position) {
 
   var windy = document.querySelector("#wind");
   windy.innerHTML = `💨 Wind: ${Math.round(position.data.wind.speed)}km/h`;
+
+  var image = document.querySelector("#icon");
+  image.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${position.data.weather[0].icon}@2x.png`
+  );
 }
 
 let key = "48aab52cca3acaf961223225511f8994";
 let url = "https://api.openweathermap.org/data/2.5/weather?q=paris";
-
-function rs(response) {
-  console.log(response);
-}
-axios.get(`${url}&appid=${key}`).then(rs);
