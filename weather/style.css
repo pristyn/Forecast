@@ -51,8 +51,9 @@
 
 .icon {
   width: 10px;
+  text-align: right;
   position: relative;
-  left: 50px;
+  left: 40px;
   top: 100px;
 }
 
