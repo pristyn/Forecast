@@ -71,7 +71,9 @@ function metropolis(position) {
   humid.innerHTML = `💧 Humidity: ${position.data.main.humidity}%`;
 
   var windy = document.querySelector("#wind");
-  windy.innerHTML = `💨 Wind: ${Math.round(position.data.wind.speed)}km/h`;
+  windy.innerHTML = `💨 Wind: ${Math.round(
+    position.data.wind.speed * 2.237
+  )}mph`;
 
   var image = document.querySelector("#icon");
   image.setAttribute(
@@ -80,5 +82,6 @@ function metropolis(position) {
   );
 }
 
+area("lagos");
 let key = "48aab52cca3acaf961223225511f8994";
 let url = "https://api.openweathermap.org/data/2.5/weather?q=paris";

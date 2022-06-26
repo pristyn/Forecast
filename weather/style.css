@@ -22,7 +22,6 @@
   color: rgb(119, 119, 235);
   font-size: 50px;
   position: relative;
-  top: 0px;
   text-align: right;
 }
 
@@ -30,6 +29,7 @@
   font-size: 35px;
   opacity: 0.8;
   position: relative;
+  left: 80px;
   top: 20px;
 }
 
@@ -53,7 +53,7 @@
   width: 10px;
   text-align: right;
   position: relative;
-  left: 40px;
+  right: 80px;
   top: 100px;
 }
 
