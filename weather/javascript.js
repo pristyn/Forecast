@@ -80,8 +80,44 @@ function metropolis(position) {
     "src",
     `http://openweathermap.org/img/wn/${position.data.weather[0].icon}@2x.png`
   );
+
+  coordinates(position.data.coord);
 }
 
 area("lagos");
-let key = "48aab52cca3acaf961223225511f8994";
-let url = "https://api.openweathermap.org/data/2.5/weather?q=paris";
+
+function weekly(daily) {
+  var date = new Date(daily * 1000);
+  var day = date.getDay();
+  let days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
+  return days[day];
+}
+
+function forecast(input) {
+  var climate = input.data.daily;
+  var condition = document.querySelector("#row");
+
+  var climateHTML = `<div class="row">`;
+  climate.forEach(function (clime, index) {
+    if (index < 4) {
+      climateHTML += `
+    <div class="col-3">
+    <div id="week">${weekly(clime.dt)}</div>
+    <img src="http://openweathermap.org/img/wn/${clime.weather[0].icon}@2x.png"
+     alt="" width="50"/>
+    <div id="description">${clime.weather[0].main}</div>
+    <div id="temperature">${Math.round(clime.temp.max)}℃</div>
+    
+  </div>`;
+    }
+  });
+
+  climateHTML += `</div>`;
+  condition.innerHTML = climateHTML;
+}
+
+function coordinates(response) {
+  var key = "48aab52cca3acaf961223225511f8994";
+  var link = `https://api.openweathermap.org/data/2.5/onecall?lat=${response.lat}&lon=${response.lon}&appid=${key}&units=metric`;
+  axios.get(link).then(forecast);
+}
