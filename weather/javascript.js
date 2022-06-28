@@ -89,7 +89,15 @@ area("lagos");
 function weekly(daily) {
   var date = new Date(daily * 1000);
   var day = date.getDay();
-  let days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
+  let days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
   return days[day];
 }
 
