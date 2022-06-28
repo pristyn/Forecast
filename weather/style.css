@@ -3,7 +3,8 @@
   border-radius: 4px;
   margin: 100px;
   padding: 10px 15px 0;
-  max-width: 50%;
+  min-width: 400px;
+  max-width: 500px;
 }
 
 .location {
