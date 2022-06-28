@@ -3,7 +3,7 @@
   border-radius: 4px;
   margin: 100px;
   padding: 10px 15px 0;
-  min-width: 400px;
+  min-width: 300px;
   max-width: 500px;
 }
 
@@ -88,9 +88,11 @@
 }
 
 #row {
+  padding-top: 10px;
+  margin-left: 0 auto;
   color: rgb(10, 28, 83);
   position: relative;
-  left: 20px;
+  left: 35px;
 }
 
 .code {
